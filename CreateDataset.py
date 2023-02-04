@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 
 class VarroavsNoVarroa():
-    IMG_SIZE = (50, 50)
+    IMG_SIZE = (150, 75)
     SI_VARROA = "SiVarroa"
     NO_VARROA = "NoVarroa"
     LABELS = {NO_VARROA: 0, SI_VARROA: 1}

@@ -7,6 +7,7 @@ from Net import Net
 
 """Acquisizione Dataset"""
 data = np.load("training_data.npy", allow_pickle=True)
+np.random.shuffle(data)
 
 """Rete Neurale"""
 net = Net()
@@ -18,7 +19,7 @@ optimizer = torch.optim.Adam(net.parameters(), lr=0.001)
 loss_function = torch.nn.MSELoss()
 
 """Dati"""
-X = torch.Tensor(np.array([i[0] for i in data])).view(-1, 50, 50)
+X = torch.Tensor(np.array([i[0] for i in data])).view(-1, 150, 75)
 
 """Feature Scaling"""
 X = X / 255.0
@@ -49,7 +50,7 @@ print("Training iniziato...\n")
 
 for epoch in range(EPOCHS):
     for i in tqdm(range(0, len(train_X), BATCH_SIZE)):
-        batch_X = train_X[i:i + BATCH_SIZE].view(-1, 1, 50, 50)
+        batch_X = train_X[i:i + BATCH_SIZE].view(-1, 1, 150, 75)
         batch_Y = train_Y[i:i + BATCH_SIZE]
         net.zero_grad()
 
