@@ -5,6 +5,7 @@ from CreateDataset import IMG_SIZE
 
 
 def accuracy(test_X, test_Y, net):
+    net.eval()
     total = 0
     correct = 0
     with torch.no_grad():
@@ -22,6 +23,7 @@ def accuracy(test_X, test_Y, net):
 
 
 def precision(test_X, test_Y, net):
+    net.eval()
     total = 0
     correct = 0
     with torch.no_grad():
@@ -42,6 +44,7 @@ def precision(test_X, test_Y, net):
 
 
 def recall(test_X, test_Y, net):
+    net.eval()
     total = 0
     correct = 0
     with torch.no_grad():
