@@ -21,8 +21,8 @@ class VarroavsNoVarroa():
                 try:
                     path = os.path.join(label, f)
                     img = cv2.imread(path)
-                    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-                    resized = cv2.resize(gray, self.IMG_SIZE)
+                    bgr = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                    resized = cv2.resize(bgr, self.IMG_SIZE)
                     self.training_data.append([np.array(resized), np.eye(2)[self.LABELS[label]]])
 
                     if label == self.SI_VARROA:

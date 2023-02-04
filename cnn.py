@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+import EvaluationMetrics
 from tqdm import tqdm
 
 from Net import Net
@@ -26,7 +27,7 @@ X = X / 255.0
 Y = torch.Tensor(np.array([i[1] for i in data]))
 
 """Percentuale divisione training e test set"""
-VAL_PCT = 0.3
+VAL_PCT = 0.1
 val_size = int(len(X) * VAL_PCT)
 print("Val size: {}\n".format(val_size))
 
@@ -42,7 +43,7 @@ test_Y = Y[-val_size:]
 BATCH_SIZE = 3
 
 """Numero Iterazioni rete"""
-EPOCHS = 3
+EPOCHS = 1
 
 print("Training iniziato...\n")
 
@@ -60,36 +61,6 @@ correct = 0
 total = 0
 
 """Calcolo metriche di valutazione"""
-
-"""Accuracy"""
-with torch.no_grad():
-    for i in tqdm(range(len(test_X))):
-        real_class = torch.argmax(test_Y[i])
-        net_out = net(test_X[i].view(-1, 1, 50, 50))[0]
-        predicted_class = torch.argmax(net_out)
-        if predicted_class == real_class:
-            correct += 1
-        total += 1
-print("Accuracy : {}".format(correct / total))
-
-"""Precision"""
-with torch.no_grad():
-    for i in tqdm(range(len(test_X))):
-        real_class = torch.argmax(test_Y[i])
-        net_out = net(test_X[i].view(-1, 1, 50, 50))[0]
-        predicted_class = torch.argmax(net_out)
-        if predicted_class == real_class and real_class == 1:
-            correct += 1
-        total += 1
-print("Precision : {}".format(correct / total))
-
-"""Recall"""
-with torch.no_grad():
-    for i in tqdm(range(len(test_X))):
-        real_class = torch.argmax(test_Y[i])
-        net_out = net(test_X[i].view(-1, 1, 50, 50))[0]
-        predicted_class = torch.argmax(net_out)
-        if predicted_class == real_class and real_class == 0:
-            correct += 1
-        total += 1
-print("Recall : {}".format(correct / total))
+#print("Accuracy: {}\n".format(EvaluationMetrics.accuracy(test_X, test_Y, net)))
+print("Precision: {}\n".format(EvaluationMetrics.precision(test_X, test_Y, net)))
+print("Recall: {}\n".format(EvaluationMetrics.recall(test_X, test_Y, net)))
