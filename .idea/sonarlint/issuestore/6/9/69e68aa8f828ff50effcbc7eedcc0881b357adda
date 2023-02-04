@@ -1,0 +1,19 @@
+
+vpython:S1192û"^Define a constant instead of duplicating this literal "attribute '{}' already exists" 3 times.(ø§Óy
+lpython:S117""URename this parameter "numSpaces" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÇØªš
+mpython:S116Ö
+"URename this field "T_destination" to match the regular expression ^[_a-z][_a-z0-9]*$.(“éß
+Ipython:S5806Õ"+Rename this variable; it shadows a builtin.(Ğò¡÷şÿÿÿÿ
+mpython:S3776ÿ"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(øğÚ
+rpython:S3776ó"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(“«öÁùÿÿÿÿ
+mpython:S3776·"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(‰¤œÁ
+rpython:S3776¤	"TRefactor this function to reduce its Cognitive Complexity from 37 to the 15 allowed.(Öéİöşÿÿÿÿ
+Dpython:S5806µ	"+Rename this variable; it shadows a builtin.(Ÿ©´ø
+rpython:S3776ø	"TRefactor this function to reduce its Cognitive Complexity from 39 to the 15 allowed.(Êòú“ÿÿÿÿÿ
+Rpython:S1135à
+"4Complete the task associated to this "TODO" comment.(€Äñ®ıÿÿÿÿ
+rpython:S3776â
+"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ï¥×‹ùÿÿÿÿ
+Mpython:S1135"4Complete the task associated to this "TODO" comment.(ŞÃ­Ğ
+rpython:S3776á"TRefactor this function to reduce its Cognitive Complexity from 37 to the 15 allowed.(È«ä…ûÿÿÿÿ
+rpython:S3776¿"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÎĞœ“şÿÿÿÿ

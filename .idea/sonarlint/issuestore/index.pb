@@ -1,0 +1,21 @@
+
+A
+training_data.npy,1\7\17e31b8b5a4465720db34b58adce542feb12066e
+9
+	expand.py,a\e\ae679fce2fd6cb6688b8feea8faa8edb7037143d
+Y
+)venv/Lib/site-packages/numpy/lib/npyio.py,8\9\8972c09a4b9f1c3b2de17b2a471a5ba38dee3c15
+?
+venv/.gitignore,e\3\e3477dd90bdeb5404622dde9262d38a1e7d946c5
+7
+test.py,a\3\a36e355ddb203d7d4133221f339dc406cb9f480f
+a
+1venv/Lib/site-packages/torch/nn/modules/module.py,6\9\69e68aa8f828ff50effcbc7eedcc0881b357adda
+]
+-venv/Lib/site-packages/torch/nn/functional.py,2\f\2f96c0f807b52d8c83335e3191a2cdd7cf48d340
+@
+CreateDataset.py,e\5\e5492f367d75a17edf31c8a27a3b9b1b85d7d500
+6
+Net.py,9\b\9bc1cc79bfd5c978de8d41b79b89f09b8b4efb33
+6
+cnn.py,4\e\4ee914e210dc8a41036eed9970674e7264dbcb6e

@@ -1,0 +1,37 @@
+
+lpython:S1192Ë"NDefine a constant instead of duplicating this literal " is not valid" 3 times.(…»‚ıüÿÿÿÿ
+ˆpython:S1192ã	"pDefine a constant instead of duplicating this literal "dropout probability has to be between 0 and 1, " 6 times.(úÎíd
+python:S1192÷"„Define a constant instead of duplicating this literal "Using a target size ({}) that is different to the input size ({}). " 4 times.(×÷±‚
+Mpython:S1066Ç"/Merge this if statement with the enclosing one.(áš›Îşÿÿÿÿ
+`python:S5799Ù"GMerge these implicitly concatenated strings; or did you forget a comma?(Û¡¦ˆ
+epython:S5799¾"GMerge these implicitly concatenated strings; or did you forget a comma?(ñ†ÌÔıÿÿÿÿ
+Ipython:S5806
+"+Rename this variable; it shadows a builtin.(Ùÿ¦åıÿÿÿÿ
+Mpython:S1135µ
+"4Complete the task associated to this "TODO" comment.(ÇÍ‚·
+Ipython:S5806ã
+"+Rename this variable; it shadows a builtin.(Ùÿ¦åıÿÿÿÿ
+Dpython:S5806›"+Rename this variable; it shadows a builtin.(±ğâä
+mpython:S3776¥"TRefactor this function to reduce its Cognitive Complexity from 30 to the 15 allowed.(Üà²ü
+Ipython:S5806š"+Rename this variable; it shadows a builtin.(—÷ˆìûÿÿÿÿ
+Mpython:S1135¥"4Complete the task associated to this "TODO" comment.(®ÅûŞ
+Mpython:S1135ç"4Complete the task associated to this "TODO" comment.(ÙĞíÚ
+fpython:S1854Ê"HRemove this assignment to local variable 'ret'; the value is never used.(şØœ«üÿÿÿÿ
+Gpython:S1940×")Use the opposite operator ("!=") instead.(€’ÛÙùÿÿÿÿ
+Gpython:S1940õ")Use the opposite operator ("!=") instead.(€’ÛÙùÿÿÿÿ
+Gpython:S1940—")Use the opposite operator ("!=") instead.(€’ÛÙùÿÿÿÿ
+Gpython:S1940²")Use the opposite operator ("!=") instead.(€’ÛÙùÿÿÿÿ
+Gpython:S1940Ñ")Use the opposite operator ("!=") instead.(€’ÛÙùÿÿÿÿ
+fpython:S1854€"HRemove this assignment to local variable 'ret'; the value is never used.(şØœ«üÿÿÿÿ
+mpython:S3776¹"TRefactor this function to reduce its Cognitive Complexity from 79 to the 15 allowed.(ÖÏìİ
+Rpython:S1135­""4Complete the task associated to this "TODO" comment.(¢÷ˆÅÿÿÿÿÿ
+Œpython:S5886%"nReturn a value of type "list[Tensor]" instead of "tuple" or update function "_in_projection_packed" type hint.(¼µÂíüÿÿÿÿ
+ppython:S117¾%"SRename this local variable "Ek" to match the regular expression ^[_a-z][a-z0-9_]*$.(åáÏ‹ÿÿÿÿÿ
+ppython:S117¾%"SRename this local variable "Eq" to match the regular expression ^[_a-z][a-z0-9_]*$.(åáÏ‹ÿÿÿÿÿ
+ppython:S117¾%"SRename this local variable "Ev" to match the regular expression ^[_a-z][a-z0-9_]*$.(åáÏ‹ÿÿÿÿÿ
+mpython:S3776ç%"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(à«¾
+kpython:S117£("SRename this local variable "Nt" to match the regular expression ^[_a-z][a-z0-9_]*$.(¿è·à
+€python:S107—&"cFunction "multi_head_attention_forward" has 24 parameters, which is greater than the 13 authorized.(â™¬‹ıÿÿÿÿ
+rpython:S3776–&"TRefactor this function to reduce its Cognitive Complexity from 67 to the 15 allowed.(Ùˆ»ïûÿÿÿÿ
+Rpython:S1135ë'"4Complete the task associated to this "TODO" comment.(Ôñ¾Šùÿÿÿÿ
+Rpython:S1135ô'"4Complete the task associated to this "TODO" comment.(Ôñ¾Šùÿÿÿÿ
