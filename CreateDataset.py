@@ -4,9 +4,10 @@ import cv2
 import numpy as np
 from tqdm import tqdm
 
+IMG_SIZE = (50, 50)
+
 
 class VarroavsNoVarroa():
-    IMG_SIZE = (150, 75)
     SI_VARROA = "SiVarroa"
     NO_VARROA = "NoVarroa"
     LABELS = {NO_VARROA: 0, SI_VARROA: 1}
@@ -22,7 +23,7 @@ class VarroavsNoVarroa():
                     path = os.path.join(label, f)
                     img = cv2.imread(path)
                     bgr = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-                    resized = cv2.resize(bgr, self.IMG_SIZE)
+                    resized = cv2.resize(bgr, IMG_SIZE)
                     self.training_data.append([np.array(resized), np.eye(2)[self.LABELS[label]]])
 
                     if label == self.SI_VARROA:
@@ -40,4 +41,3 @@ class VarroavsNoVarroa():
 if __name__ == "__main__":
     sv_vs_nv = VarroavsNoVarroa()
     sv_vs_nv.make_training_data()
-
