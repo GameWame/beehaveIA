@@ -64,4 +64,5 @@ def train():
     print("Accuracy: {}\n".format(EvaluationMetrics.accuracy(test_X, test_Y, net)))
     print("Precision: {}\n".format(EvaluationMetrics.precision(test_X, test_Y, net)))
     print("Recall: {}\n".format(EvaluationMetrics.recall(test_X, test_Y, net)))
-    net.train()
+
+    return net

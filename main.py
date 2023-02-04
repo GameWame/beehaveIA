@@ -1,3 +1,3 @@
 from cnn import train
 
-train()
+net = train()
