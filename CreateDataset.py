@@ -9,7 +9,7 @@ IMG_SIZE = (50, 50)
 
 class VarroavsNoVarroa():
     SI_VARROA = "SiVarroa"
-    NO_VARROA = "NoVarroa"
+    NO_VARROA = "NoVarroa2"
     LABELS = {NO_VARROA: 0, SI_VARROA: 1}
     si_varroa_count = 0
     no_varroa_count = 0

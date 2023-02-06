@@ -15,7 +15,7 @@ def train():
     net = Net()
 
     """Ottimizzatore della rete"""
-    optimizer = torch.optim.Adam(net.parameters(), lr=0.001)
+    optimizer = torch.optim.SGD(net.parameters(), lr=0.001)
 
     """Funzione di perdita"""
     loss_function = torch.nn.CrossEntropyLoss()
@@ -28,6 +28,7 @@ def train():
 
     """Etichette"""
     Y = torch.Tensor(np.array([i[1] for i in data]))
+
     """Percentuale divisione training e test set"""
     VAL_PCT = 0.1
     val_size = int(len(X) * VAL_PCT)
@@ -65,4 +66,10 @@ def train():
     print("Precision: {}\n".format(EvaluationMetrics.precision(test_X, test_Y, net)))
     print("Recall: {}\n".format(EvaluationMetrics.recall(test_X, test_Y, net)))
 
+    torch.save(net.state_dict(), "VarroaModel.pth")
+
     return net
+
+
+if __name__ == "__main__":
+    train()
