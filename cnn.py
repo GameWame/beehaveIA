@@ -21,7 +21,7 @@ def train():
     loss_function = torch.nn.CrossEntropyLoss()
 
     """Dati"""
-    X = torch.Tensor(np.array([i[0] for i in data])).view(-1, 3, IMG_SIZE[0], IMG_SIZE[1])
+    X = torch.Tensor(np.array([i[0] for i in data])).view(-1, IMG_SIZE[0], IMG_SIZE[1], 3)
 
     """Feature Scaling"""
     X = X / 255.0
