@@ -22,3 +22,4 @@ if torch.argmax(result):
     print("SI Varroa")
 else:
     print("No Varroa")
+
