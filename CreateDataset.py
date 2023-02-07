@@ -24,7 +24,7 @@ class VarroavsNoVarroa():
                     img = cv2.imread(path)
                     bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
                     resized = cv2.resize(bgr, IMG_SIZE)
-                    self.training_data.append([np.array(resized), np.eye(2)[self.LABELS[label]]])
+                    self.training_data.append([resized, np.eye(2)[self.LABELS[label]]])
 
                     if label == self.SI_VARROA:
                         self.si_varroa_count += 1

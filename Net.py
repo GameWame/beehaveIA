@@ -15,7 +15,7 @@ class Net(nn.Module):
         self.bn2 = nn.BatchNorm2d(128)
         self.bn3 = nn.BatchNorm2d(256)
         self.bn4 = nn.BatchNorm2d(512)
-        self.fc1 = None
+        self.fc1 = nn.Linear(512, 2)
 
     def forward(self, x):
 

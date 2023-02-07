@@ -10,6 +10,7 @@ from Net import Net
 def train():
     """Acquisizione Dataset"""
     data = np.load("training_data.npy", allow_pickle=True)
+
     """Rete Neurale"""
     net = Net()
 
@@ -42,7 +43,7 @@ def train():
     test_Y = Y[-val_size:]
 
     """Numero passi"""
-    BATCH_SIZE = 9
+    BATCH_SIZE = 10
 
     """Numero Iterazioni rete"""
     EPOCHS = 3
