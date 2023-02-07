@@ -22,7 +22,7 @@ class VarroavsNoVarroa():
                 try:
                     path = os.path.join(label, f)
                     img = cv2.imread(path)
-                    bgr = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                    bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
                     resized = cv2.resize(bgr, IMG_SIZE)
                     self.training_data.append([np.array(resized), np.eye(2)[self.LABELS[label]]])
 

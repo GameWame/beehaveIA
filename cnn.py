@@ -10,18 +10,17 @@ from Net import Net
 def train():
     """Acquisizione Dataset"""
     data = np.load("training_data.npy", allow_pickle=True)
-
     """Rete Neurale"""
     net = Net()
 
     """Ottimizzatore della rete"""
-    optimizer = torch.optim.SGD(net.parameters(), lr=0.001)
+    optimizer = torch.optim.Adam(net.parameters(), lr=0.001)
 
     """Funzione di perdita"""
     loss_function = torch.nn.CrossEntropyLoss()
 
     """Dati"""
-    X = torch.Tensor(np.array([i[0] for i in data])).view(-1, IMG_SIZE[0], IMG_SIZE[1])
+    X = torch.Tensor(np.array([i[0] for i in data])).view(-1, 3, IMG_SIZE[0], IMG_SIZE[1])
 
     """Feature Scaling"""
     X = X / 255.0
@@ -43,7 +42,7 @@ def train():
     test_Y = Y[-val_size:]
 
     """Numero passi"""
-    BATCH_SIZE = 10
+    BATCH_SIZE = 9
 
     """Numero Iterazioni rete"""
     EPOCHS = 3
@@ -52,7 +51,7 @@ def train():
 
     for epoch in range(EPOCHS):
         for i in tqdm(range(0, len(train_X), BATCH_SIZE)):
-            batch_X = train_X[i:i + BATCH_SIZE].view(-1, 1, IMG_SIZE[0], IMG_SIZE[1])
+            batch_X = train_X[i:i + BATCH_SIZE].view(-1, 3, IMG_SIZE[0], IMG_SIZE[1])
             batch_Y = train_Y[i:i + BATCH_SIZE]
             net.zero_grad()
 
