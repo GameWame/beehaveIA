@@ -1,6 +1,6 @@
 import numpy as np
 import torch
-import EvaluationMetrics
+import Test
 from tqdm import tqdm
 
 from CreateDataset import IMG_SIZE
@@ -62,9 +62,10 @@ def train():
             optimizer.step()
 
     """Calcolo metriche di valutazione"""
-    print("Accuracy: {}\n".format(EvaluationMetrics.accuracy(test_X, test_Y, net)))
-    print("Precision: {}\n".format(EvaluationMetrics.precision(test_X, test_Y, net)))
-    print("Recall: {}\n".format(EvaluationMetrics.recall(test_X, test_Y, net)))
+    metrics = Test.test(test_X, test_Y, net)
+    print("Accuracy: {}\n".format(metrics["accuracy"]))
+    print("Precision: {}\n".format(metrics["precision"]))
+    print("Recall: {}\n".format(metrics["recall"]))
 
     torch.save(net.state_dict(), "VarroaModel.pth")
 
