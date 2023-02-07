@@ -4,17 +4,21 @@ from torch import Tensor
 
 from CreateDataset import IMG_SIZE
 from Net import Net
-from cnn import train
-
-net = train()
-torch.save(net.state_dict(), "./VarroaModel.pth")
 
 img = cv2.imread("SiVarroa/0CRzEsP2ONDJtOkqP8fSSE5Dif7iaVoB.jpeg")
-bgr = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 resized = cv2.resize(bgr, IMG_SIZE)
+resized = Tensor(resized).view(-1, IMG_SIZE[0], IMG_SIZE[1], 3)[0]
 
+resized = resized / 255
 net = Net()
-net.load_state_dict(torch.load("VarroaModel.pth"), strict=False)
+load = torch.load("VarroaModel.pth")
+net.load_state_dict(load)
 net.eval()
-result = net(Tensor(resized).view(-1, 1, IMG_SIZE[0], IMG_SIZE[1]))
+with torch.no_grad():
+    result = net(resized.view(-1,  3, IMG_SIZE[0], IMG_SIZE[1]))[0]
 print(result)
+if torch.argmax(result):
+    print("SI Varroa")
+else:
+    print("No Varroa")
