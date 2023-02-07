@@ -1,6 +1,6 @@
 import numpy as np
 import torch
-import Test
+import TestNet
 from tqdm import tqdm
 
 from CreateDataset import IMG_SIZE
@@ -62,7 +62,7 @@ def train():
             optimizer.step()
 
     """Calcolo metriche di valutazione"""
-    metrics = Test.test(test_X, test_Y, net)
+    metrics = TestNet.test(test_X, test_Y, net)
     print("Accuracy: {}\n".format(metrics["accuracy"]))
     print("Precision: {}\n".format(metrics["precision"]))
     print("Recall: {}\n".format(metrics["recall"]))
