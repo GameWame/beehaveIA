@@ -1,11 +1,37 @@
-from flask import Blueprint, request
+from flask import request, Blueprint
+import os
 
-gia= Blueprint('gia', __name__)
+from Routes import default_page
+from main import predict
 
-@gia.route('/inserisci_ape', methods=['GET', 'POST'])
-def inserimento_prodotto():
+ALLOWED_EXTENSIONS = {'jpeg'}
+
+gia = Blueprint("gia", __name__)
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@gia.route('/inserisci_img_ape', methods=['GET', 'POST'])
+def inserisci_img_ape():
     if request.method == 'POST':
-        #do the magic
+        file = request.files['file']
+        if not file:
+            print('No file found.')
+            return default_page()
 
+        if file.filename == '':
+            print('No selected file.')
+            return default_page()
+        if not allowed_file(file.filename):
+            print("Select a valid format.")
+            return default_page()
+        if file and allowed_file(file.filename):
+            file.save(file.filename)
+            predict(file.filename)
+            print("File Uploaded.")
+            os.remove(file.filename)
 
-
+    return default_page()

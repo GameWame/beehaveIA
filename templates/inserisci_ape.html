@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
+
     </title>
-    <link rel="stylesheet" href="inserisci_ape.css">
-    <script src="inserisci_ape.js"></script>
 </head>
 
 <body>
-    <form action="/inserisci_img_ape" method="POST">
-        <input type="file" multiple>
+    <form action="/inserisci_img_ape" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
         <p>Drag your files here or click in this area.</p>
-        <button type="submit">Upload</button>
+        <input type=submit value=Upload>
     </form>
 </body>
 
