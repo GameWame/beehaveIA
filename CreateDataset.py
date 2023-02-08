@@ -9,7 +9,7 @@ IMG_SIZE = (50, 50)
 
 class VarroavsNoVarroa():
     SI_VARROA = "SiVarroa"
-    NO_VARROA = "NoVarroa2"
+    NO_VARROA = "NoVarroa"
     LABELS = {NO_VARROA: 0, SI_VARROA: 1}
     si_varroa_count = 0
     no_varroa_count = 0
@@ -22,8 +22,7 @@ class VarroavsNoVarroa():
                 try:
                     path = os.path.join(label, f)
                     img = cv2.imread(path)
-                    bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
-                    resized = cv2.resize(bgr, IMG_SIZE)
+                    resized = cv2.resize(img, IMG_SIZE)
                     self.training_data.append([resized, np.eye(2)[self.LABELS[label]]])
 
                     if label == self.SI_VARROA:
