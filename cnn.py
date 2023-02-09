@@ -43,7 +43,7 @@ def train():
     test_Y = Y[-val_size:]
 
     """Numero passi"""
-    BATCH_SIZE = 10
+    BATCH_SIZE = 100
 
     """Numero Iterazioni rete"""
     EPOCHS = 3
