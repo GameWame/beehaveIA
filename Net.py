@@ -17,13 +17,11 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(512, 2)
 
     def forward(self, x):
-
         x = F.max_pool2d(F.relu(self.bn1(self.conv1(x))), 3)
 
         x = F.max_pool2d(F.relu(self.bn2(self.conv2(x))), 3)
 
         x = F.max_pool2d(F.relu(self.bn3(self.conv3(x))), 3)
-
 
         to_linear = x[0].shape[0] * x[0].shape[1] * x[0].shape[2]
         x = x.view(-1, to_linear)
