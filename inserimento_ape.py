@@ -22,19 +22,16 @@ def inserisci_img_ape():
             print('No file found.')
             return default_page()
 
-        if file.filename == '':
+        if file == '':
             print('No selected file.')
             return default_page()
-        if not allowed_file(file.filename):
-            print("Select a valid format.")
-            return default_page()
-        if file and allowed_file(file.filename):
-            file.save(file.filename)
-            if predict(file.filename):
-                flash("Ape affetta dal parassita Varroa Destructor")
-            else:
-                flash("Ape non affetta da nessun parassita")
-            print("File Uploaded.")
-            os.remove(file.filename)
+
+        file.save(file.filename)
+        if predict(file.filename):
+            flash("Ape affetta dal parassita Varroa Destructor")
+        else:
+            flash("Ape non affetta da nessun parassita")
+        print("File Uploaded.")
+        os.remove(file.filename)
 
     return default_page()

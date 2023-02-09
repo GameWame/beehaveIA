@@ -18,7 +18,7 @@ def train():
     optimizer = torch.optim.Adam(net.parameters(), lr=0.001)
 
     """Funzione di perdita"""
-    loss_function = torch.nn.CrossEntropyLoss()
+    loss_function = torch.nn.L1Loss()
 
     """Dati"""
     X = torch.Tensor(np.array([i[0] for i in data])).view(-1, IMG_SIZE[0], IMG_SIZE[1], 3)
