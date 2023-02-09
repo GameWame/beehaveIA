@@ -6,9 +6,9 @@ from CreateDataset import IMG_SIZE
 from Net import Net
 
 
-def predict(str):
+def predict(image):
 
-    img = cv2.imread(str)
+    img = cv2.imread(image)
     resized = cv2.resize(img, IMG_SIZE)
     resized = Tensor(resized).view(-1, IMG_SIZE[0], IMG_SIZE[1], 3)[0]
 

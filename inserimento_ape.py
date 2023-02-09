@@ -1,4 +1,4 @@
-from flask import request, Blueprint
+from flask import request, Blueprint, flash
 import os
 
 from Routes import default_page
@@ -30,7 +30,10 @@ def inserisci_img_ape():
             return default_page()
         if file and allowed_file(file.filename):
             file.save(file.filename)
-            predict(file.filename)
+            if predict(file.filename):
+                flash("Ape affetta dal parassita Varroa Destructor")
+            else:
+                flash("Ape non affetta da nessun parassita")
             print("File Uploaded.")
             os.remove(file.filename)
 

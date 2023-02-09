@@ -136,6 +136,14 @@ padding-left: 50px;
         <input  type="file" name="file">
         <input style="text-align:center;margin-right:-10%;z-index: 1" type=submit value=Controlla>
     </form>
+      <div>
+          <p>ciao</p>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <p>{{ messages[0] }}</p>
+            {% endif %}
+          {% endwith %}
+      </div>
     </div>
     </div>
 </body>
