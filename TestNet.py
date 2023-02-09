@@ -14,7 +14,7 @@ def test(test_X, test_Y, net):
     correct_recall = 0
     total_recall = 0
 
-    parametervalues = {"accuracy": 0, "precision": 0, "recall": 0}
+    parameter_values = {"accuracy": 0, "precision": 0, "recall": 0}
     with torch.no_grad():
         for i in tqdm(range(len(test_X))):
             real_class = torch.argmax(test_Y[i])
@@ -35,10 +35,10 @@ def test(test_X, test_Y, net):
                 total_recall += 1
 
         if total_accuracy:
-            parametervalues["accuracy"] = correct_accuracy / total_accuracy
+            parameter_values["accuracy"] = correct_accuracy / total_accuracy
         if total_precision:
-            parametervalues["precision"] = correct_precision / total_precision
+            parameter_values["precision"] = correct_precision / total_precision
         if total_recall:
-            parametervalues["recall"] = correct_recall / total_recall
+            parameter_values["recall"] = correct_recall / total_recall
 
-    return parametervalues
+    return parameter_values

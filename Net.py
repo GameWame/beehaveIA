@@ -26,10 +26,9 @@ class Net(nn.Module):
         x = F.max_pool2d(F.relu(self.bn3(self.conv3(x))), 3)
 
         x = F.max_pool2d(F.relu(self.bn4(self.conv4(x))), 1)
+
         to_linear = x[0].shape[0] * x[0].shape[1] * x[0].shape[2]
         x = x.view(-1, to_linear)
-
-        self.fc1 = nn.Linear(to_linear, 2)
 
         x = F.relu(self.fc1(x))
         return F.softmax(x, dim=1)
