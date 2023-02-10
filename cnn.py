@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import TestNet
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 from CreateDataset import IMG_SIZE
 from Net import Net
@@ -71,6 +72,18 @@ def train():
 
     return net
 
+
+names = ['1', '2', '3', '4', '5', '6', '7']
+values = [0, 0.27, 0.63, 0.72, 0.67, 0.73, 0.75]
+
+plt.figure(figsize=(9, 3))
+plt.suptitle('Media di valori per numero di epoche')
+plt.plot(names, values, "-o")
+x0 = [0]
+y0 = [0]
+plt.plot(x0, y0, "s")
+
+plt.show()
 
 if __name__ == "__main__":
     train()

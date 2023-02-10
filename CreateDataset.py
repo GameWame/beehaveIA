@@ -1,6 +1,7 @@
 import os
 
 import cv2
+import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 
@@ -35,6 +36,14 @@ class VarroavsNoVarroa():
         np.save("training_data.npy", self.training_data)
         print("Varroa: ", self.si_varroa_count)
         print("No Varroa:", self.no_varroa_count)
+
+        names = ['INFETTE', 'SANE']
+        values = [self.si_varroa_count, self.no_varroa_count]
+        plt.figure(figsize=(9, 3))
+        plt.subplot(132)
+        plt.bar(names, values)
+        plt.suptitle('Suddivisione istanze delle api nel dataset')
+        plt.show()
 
 
 if __name__ == "__main__":
