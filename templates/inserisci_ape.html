@@ -140,23 +140,17 @@ padding-left: 50px;
         <input  type="file" name="file">
         <input style="text-align:center;margin-right:-10%;z-index: 1" type=submit value=Controlla>
     </form>
-      <div>
-           <br><br>
-        <div class="alert alert-success alert-dismissible d-flex align-items-center fade show">
-    <i class="bi-check-circle-fill" style="opacity: 90%"></i>
-    <strong class="mx-2" >Success!</strong> Inserimento andato a buon fine.
-
-</div>
-          {% with messages = get_flashed_messages() %}
+      {% with messages = get_flashed_messages() %}
             {% if messages %}
+           <br>
+        <div class="alert d-flex align-items-center fade show">
                 <p>{{ messages[0] }}</p>
-            {% endif %}
-          {% endwith %}
-      </div>
 
-
+        </div>
+        {% endif %}
+      {% endwith %}
   </div>
-      </div>
+</div>
 
 </body>
 
