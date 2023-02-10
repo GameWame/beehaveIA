@@ -25,5 +25,5 @@ class Net(nn.Module):
 
         x = x.view(-1, 512)
 
-        x = F.relu(self.fc1(x))
+        x = self.fc1(x)
         return F.softmax(x, dim=1)
