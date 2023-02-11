@@ -2,8 +2,6 @@ import numpy as np
 import torch
 import TestNet
 from tqdm import tqdm
-import matplotlib.pyplot as plt
-from matplotlib import interactive
 
 from CreateDataset import IMG_SIZE
 from Net import Net
@@ -45,10 +43,10 @@ def train():
     test_Y = Y[-val_size:]
 
     """Numero passi"""
-    BATCH_SIZE = 100
+    BATCH_SIZE = 50
 
     """Numero Iterazioni rete"""
-    EPOCHS = 3
+    EPOCHS = 4
 
     print("Training iniziato...\n")
 
@@ -73,26 +71,6 @@ def train():
 
     return net
 
-
-epochs = ['1', '2', '3', '4', '5', '6', '7']
-ep_values = [0, 0.27, 0.63, 0.72, 0.67, 0.73, 0.75]
-batches = ['10', '50', '100', '150', '200']
-ba_values =[0.6, 0.67, 0.55, 0.3, 0]
-
-plt.figure(figsize=(9, 3))
-plt.suptitle('Media di valori per numero di epoche')
-plt.plot(epochs, ep_values, "-oy")
-plt.xlim(0, 7)
-plt.ylim(0, 1)
-interactive(True)
-plt.show()
-
-plt.figure(figsize=(9, 3))
-plt.suptitle('Media di valori per numero di batch')
-plt.plot(batches, ba_values, "-oy")
-plt.ylim(0, 1)
-interactive(False)
-plt.show()
 
 if __name__ == "__main__":
     train()
