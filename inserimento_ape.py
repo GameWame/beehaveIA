@@ -1,8 +1,9 @@
 from flask import request, Blueprint, flash
 import os
 
+from AdapterVarroa import AdapterVarroa
 from Routes import default_page
-from main import predict
+from BeeClassifier import BeeClassifier
 
 ALLOWED_EXTENSIONS = {'jpeg'}
 
@@ -27,7 +28,9 @@ def inserisci_img_ape():
             return default_page()
 
         file.save(file.filename)
-        if predict(file.filename):
+        classifier = BeeClassifier()
+        adapter = AdapterVarroa(classifier)
+        if adapter.classify(file.filename):
             flash("Ape affetta dal parassita Varroa Destructor")
         else:
             flash("Ape non affetta da nessun parassita")
