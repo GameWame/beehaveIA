@@ -1,18 +1,11 @@
-from flask import request, Blueprint, flash
+from flask import request, Blueprint
 import os
 
 from AdapterVarroa import AdapterVarroa
 from Routes import default_page
 from BeeClassifier import BeeClassifier
 
-ALLOWED_EXTENSIONS = {'jpeg'}
-
 gia = Blueprint("gia", __name__)
-
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @gia.route('/inserisci_img_ape', methods=['GET', 'POST'])
