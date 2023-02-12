@@ -1,3 +1,5 @@
+from flask import flash
+
 from BeeClassifier import BeeClassifier
 
 
@@ -6,4 +8,7 @@ class AdapterVarroa(BeeClassifier):
         self.model = model
 
     def classify(self, image):
-        return self.model.predict(image)
+        if self.model.predict(image):
+            flash("Ape affetta dal parassita Varroa Destructor")
+        else:
+            flash("Ape non affetta da nessun parassita")

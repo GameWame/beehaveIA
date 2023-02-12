@@ -30,10 +30,7 @@ def inserisci_img_ape():
         file.save(file.filename)
         classifier = BeeClassifier()
         adapter = AdapterVarroa(classifier)
-        if adapter.classify(file.filename):
-            flash("Ape affetta dal parassita Varroa Destructor")
-        else:
-            flash("Ape non affetta da nessun parassita")
+        adapter.classify(file.filename)
         print("File Uploaded.")
         os.remove(file.filename)
 
