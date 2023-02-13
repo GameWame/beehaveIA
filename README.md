@@ -43,10 +43,10 @@ Process documentation can be found in documents directory. The AI module has alw
 ---
 
 <ul>
-  <li>Luigi Bacco - <em>Developer</em>             <a href href="https://github.com/Luigi11162">Luigi11162</a>          </li>
-  <li>Gianluca Ronga - <em>Developer</em>           <a href  "https://github.com/GameWame">GameWame</a>            </li> 
-  <li>Irene Gaita - <em>Developer</em>          <a href "https://github.com/IreneGaita">IreneGaita</a>          </li>
-  <li>Maria Lucia Fede - <em>Developer</em>         <a href "https://github.com/MariaLuciaFede01">MariaLuciaFede01</a>     </li>
+  <li>Luigi Bacco - <em>Developer</em>             <a href="https://github.com/Luigi11162">Luigi11162</a>          </li>
+  <li>Gianluca Ronga - <em>Developer</em>           <a href="https://github.com/GameWame">GameWame</a>            </li> 
+  <li>Irene Gaita - <em>Developer</em>          <a href="https://github.com/IreneGaita">IreneGaita</a>          </li>
+  <li>Maria Lucia Fede - <em>Developer</em>         <a href="https://github.com/MariaLuciaFede01">MariaLuciaFede01</a>     </li>
 </ul>
 
 
