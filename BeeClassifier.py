@@ -16,7 +16,7 @@ class BeeClassifier:
 
         resized = resized / 255
         net = Net()
-        load = torch.load("VarroaModel.pth")
+        load = torch.load("VarroaModelBest.pth")
         net.load_state_dict(load)
         net.eval()
         with torch.no_grad():
