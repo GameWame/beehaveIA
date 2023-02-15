@@ -21,8 +21,7 @@ def inserisci_img_ape():
             return default_page()
 
         file.save(file.filename)
-        classifier = BeeClassifier()
-        adapter = AdapterVarroa(classifier)
+        adapter = AdapterVarroa()
         adapter.classify(file.filename)
         print("File Uploaded.")
         os.remove(file.filename)
